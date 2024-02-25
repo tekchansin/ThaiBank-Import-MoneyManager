@@ -1,0 +1,5 @@
+pandas
+tabula-py
+csv
+re
+PyPDF2

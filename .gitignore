@@ -1,0 +1,8 @@
+input/*/*
+output/*
+__pycache__
+.DS_Store
+*/*.pdf
+*/*.PDF
+tek.py
+mew.py
