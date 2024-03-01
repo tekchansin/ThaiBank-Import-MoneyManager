@@ -23,9 +23,11 @@
 - SCB Statement account (SCB Easy)
 - TTB Creditcard (TTB touch, export statement)
 - FirstChoice Credicard (Monthly via email)
+- KBank Statement account 
 
 ## How to use
-- upload statement to folder input/
-- run python script, output will be at /output
+- upload statement to folder input/<profile>/banktype/<pdf>
+- modify sample.py, input pdf pass
+- run python script, output will be at /output/xx
 - upload output file to MoneyManager
 - import from MoneyManager App (Select DateFormat dd.mm.yyy)
