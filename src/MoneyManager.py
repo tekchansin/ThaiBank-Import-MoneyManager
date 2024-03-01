@@ -92,7 +92,7 @@ class MoneyManager:
                     df.at[row.Index, "Income/Expense"] = 'Expense' 
                elif re.search('|'.join(keyword_Salary), row.Note, re.IGNORECASE):
                     df.at[row.Index, 'Category'] = '💰 Salary'
-                    df.at[row.Index, "Income/Expense"] = 'Expense' 
+                    df.at[row.Index, "Income/Expense"] = 'Income' 
                elif re.search('|'.join(keywork_Investment), row.Note, re.IGNORECASE):
                     df.at[row.Index, 'Category'] = '💰 Invest'
                     df.at[row.Index, "Income/Expense"] = 'Expense' 
@@ -119,6 +119,3 @@ class MoneyManager:
                df.to_csv(outputfile, encoding='utf-8', index=False, sep="\t", quoting=csv.QUOTE_NONNUMERIC,
                          columns=['Date','Account','Category',  'Subcategory',  'Note', 'Amount', 'Income/Expense',  'Description'])
         
-     def cleanup(self, outputpath):
-          for filename in glob.glob(outputpath+'/*.tsv'):
-               os.remove(filename)
